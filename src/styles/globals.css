@@ -31,7 +31,7 @@ body {
 
 .main__main-heading {
   color: var(--color-blue);
-  font-size: var(--font-lg);
+  font-size: 1.35rem;
   font-weight: var(--font-black);
   text-transform: capitalize;
   letter-spacing: -0.5px;
@@ -39,6 +39,11 @@ body {
   position: relative;
 }
 
+@media (min-width: 40rem) {
+  .main__main-heading {
+    font-size: var(--font-lg);
+  }
+}
 .main__main-heading::after {
   content: "";
   width: 75%;
@@ -73,9 +78,10 @@ body {
   border: 2px solid var(--color-dark-grey);
   padding: var(--padding-xs);
   flex: 1;
+  width: 100%;
   border-radius: var(--radius-xs);
   color: var(--color-dark-grey);
-  font-size: var(--font-md);
+  font-size: 0.75rem;
   font-weight: var(--font-bold);
 }
 
@@ -87,12 +93,18 @@ body {
 .copy-button {
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: 4px;
   transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
+  width: 35px;
+  height: 35px;
   background-color: var(--color-light-grey);
   border-radius: 50%;
+}
+
+@media (min-width: 40rem) {
+  .copy-button {
+    font-size: var(--font-sm);
+  }
 }
 
 .form__fieldset {

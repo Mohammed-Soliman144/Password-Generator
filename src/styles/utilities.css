@@ -1,0 +1,55 @@
+@layer tokens;
+
+@import "./tokens.css" layer(tokens);
+
+.container {
+  margin-inline: auto;
+  padding-inline: var(--padding-sm);
+  width: 100%;
+}
+
+@media (min-width: 40rem) {
+  .container {
+    padding-inline: var(--padding-sm);
+    max-width: calc(40rem - 2 * var(--padding-sm));
+  }
+}
+
+@media (min-width: 48rem) {
+  .container {
+    padding-inline: var(--padding-sm);
+    max-width: calc(48rem - 2 * var(--padding-sm));
+  }
+}
+
+@media (min-width: 64rem) {
+  .container {
+    padding-inline: var(--padding-md);
+    max-width: calc(64rem - 2 * var(--padding-md));
+  }
+}
+
+@media (min-width: 80rem) {
+  .container {
+    padding-inline: var(--padding-lg);
+    max-width: calc(80rem - 2 * var(--padding-lg));
+  }
+}
+
+@media (min-width: 96rem) {
+  .container {
+    padding-inline: var(--padding-xl);
+    max-width: calc(40rem - 2 * var(--padding-xl));
+  }
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(50%);
+}

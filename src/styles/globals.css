@@ -1,0 +1,207 @@
+@layer reset, tokens, utilities;
+
+@import "./reset.css" layer(reset);
+@import "./tokens.css" layer(tokens);
+@import "./utilities.css" layer(utilities);
+
+/* Body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  background: var(--linear-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--color-light-grey);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2xl);
+  padding: var(--padding-md);
+  width: 420px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.main__main-heading {
+  color: var(--color-blue);
+  font-size: var(--font-lg);
+  font-weight: var(--font-black);
+  text-transform: capitalize;
+  letter-spacing: -0.5px;
+  align-self: center;
+  position: relative;
+}
+
+.main__main-heading::after {
+  content: "";
+  width: 75%;
+  height: 3px;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  background-color: var(--color-blue);
+  transform: translateX(-50%);
+}
+
+.main__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  text-transform: capitalize;
+  font-size: var(--font-sm);
+}
+
+.form-group:first-child {
+  margin-top: var(--spacing-md);
+}
+
+.input-text {
+  border: 2px solid var(--color-dark-grey);
+  padding: var(--padding-xs);
+  flex: 1;
+  border-radius: var(--radius-xs);
+  color: var(--color-dark-grey);
+  font-size: var(--font-md);
+  font-weight: var(--font-bold);
+}
+
+.input-text:focus {
+  outline: none;
+  border: 2px solid var(--color-blue);
+}
+
+.copy-button {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  background-color: var(--color-light-grey);
+  border-radius: 50%;
+}
+
+.form__fieldset {
+  background-color: var(--color-white);
+  padding-top: var(--padding-xs);
+  padding-inline: var(--padding-xs);
+  border-radius: var(--radius-xs);
+}
+
+.form__fieldset .form-group {
+  margin-bottom: 5px;
+}
+
+.form__fieldset .form-group:first-of-type {
+  margin-bottom: var(--padding-md);
+}
+
+.input-range {
+  margin-right: 20px;
+}
+
+.output-range {
+  position: absolute;
+  right: -2px;
+  background-color: var(--color-light-grey);
+  padding: var(--padding-sp);
+  font-size: smaller;
+  font-weight: var(--font-bold);
+  color: var(--color-blue);
+  border-radius: var(--radius-xs);
+}
+
+.generate-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-transform: capitalize;
+  font-size: var(--font-md);
+  background: var(--linear-background);
+  padding: var(--padding-xs);
+  border-radius: var(--radius-sm);
+  width: 100%;
+  color: var(--color-white);
+  transition: transform 0.4s;
+}
+
+.generate-button:hover {
+  transform: translateY(-2px);
+}
+
+.generate-button:active {
+  transform: translateY(0);
+}
+
+.key-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.form-controls + .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.form__indicator {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  font-weight: var(--font-bolder);
+  letter-spacing: -0.25px;
+  color: var(--color-blue);
+}
+
+.form__meter {
+  width: 100%;
+}
+
+.input-check {
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.3s;
+  position: relative;
+}
+
+.input-check::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark);
+  border-radius: var(--radius-xs);
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  transform: translateY(-50%);
+  font-size: small;
+  font-weight: var(--font-bolder);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-check:checked::after {
+  content: "\2713"; /* check mark unicode escape sequence (hexadecimal) \2713 */
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}

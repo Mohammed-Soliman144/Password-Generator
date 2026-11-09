@@ -1,0 +1,187 @@
+/* ============================= Default Styles Sheet ================= */
+/* 1- Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  border: 0;
+}
+
+/* 2- HTML and BODY */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-text-rendering: optimizeSpeed;
+  text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: inherit;
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 3- TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+/* 4- LISTS */
+ul,
+ol {
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.25em;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 1.25em;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* FORM */
+input,
+textarea,
+button,
+select {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+fieldset {
+  border: 0;
+  min-width: 0;
+}
+
+/* MEDIA */
+picture,
+img,
+svg,
+canvas,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img[width][height] {
+  height: auto;
+}
+
+iframe {
+  border: 0;
+  max-width: 100%;
+}
+
+svg {
+  fill: none;
+}
+
+/* PSEUDO ELEMENTS and PSEUDO CLASSES */
+::placeholder {
+  opacity: 1;
+}
+
+:focus:not(:focus-visible) {
+  border: 1px solid currentColor;
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Other elements */
+hr {
+  border: none;
+  border-top: 2px solid currentColor;
+  opacity: 0.7;
+}
+
+address {
+  font-style: normal;
+}
+
+sub,
+sup {
+  position: relative;
+  line-height: 0;
+  vertical-align: baseline;
+  font-size: 75%;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Media Queries */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: smooth !important;
+  }
+}
